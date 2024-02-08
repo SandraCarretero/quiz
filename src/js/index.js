@@ -1,3 +1,10 @@
-import { sayHello } from './demo';
+import { gameElement } from './dom';
+import { answerSelection, startGame } from './quiz-functions';
 
-sayHello();
+startGame();
+
+gameElement.addEventListener('click', event => {
+	if (event.target.classList.contains('answer')) {
+		answerSelection(event);
+	}
+});
